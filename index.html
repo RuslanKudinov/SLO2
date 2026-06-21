@@ -345,7 +345,7 @@
     .social-link svg { width: 100%; height: 100%; fill: var(--white); }
 
     /* FOOTER */
-    .footer { background: var(--gray-dark); border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 0 0; }
+    .footer { background: #1d1d1b; border-top: 1px solid rgba(255,255,255,0.05); padding: 40px 0 0; }
     .footer-grid { display: grid; grid-template-columns: 1fr; gap: 30px; text-align: center; }
     @media (min-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; text-align: left; } }
     .footer h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--white); }
@@ -641,18 +641,24 @@
           <p style="font-size:1rem;margin-bottom:25px;">Хотите пригласить оркестр на ваше мероприятие или узнать подробности о концертах? Заполните форму — мы свяжемся с вами в ближайшее время.</p>
           <div class="contact-item">
             <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-            <div class="contact-info"><h4>Мессенджеры</h4><a href="https://t.me/orchestraBest" target="_blank">Telegram</a></div>
+            <!-- <div class="contact-info"><h4>Мессенджеры</h4><a href="https://t.me/orchestraBest" target="_blank">Telegram</a></div> -->
+          <div class="contact-info"><h4>Мессенджеры</h4><a href="https://t.me/orchestraBest" target="_blank">Telegram</a> <a href="https://vk.com/orchestra.best" target="_blank">ВК</a></div>
+
           </div>
           <div class="contact-item">
             <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
             <div class="contact-info"><h4>Почта</h4><a href="mailto:info@slo-orchestra.ru">info@slo-orchestra.ru</a></div>
           </div>
+          <div class="contact-item">
+  <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+  <div class="contact-info"><h4>Телефон</h4><a href="#" onclick="navigator.clipboard.writeText('+7 (999 ) 123-45-67'); return false;">+7 (999) 123-45-67</a></div>
+</div>
         </div>
         <div class="form-wrapper reveal">
           <form id="homeForm" onsubmit="handleFormSubmit(event,'homeForm')">
             <div class="form-group"><label>Ваше имя *</label><input type="text" name="name" required placeholder="Как к вам обращаться?"></div>
             <div class="form-group"><label>Телефон или Email *</label><input type="text" name="contact" required placeholder="+7 (___) ___-__-__ или email"></div>
-            <div class="form-group"><label>Тип запроса</label><select name="type"><option value="concert">Купить билет на концерт</option><option value="order">Заказать выступление</option><option value="cooperation">Сотрудничество</option><option value="other">Другое</option></select></div>
+            <div class="form-group"><label>Тип запроса</label><select name="type"><option value="concert">Купить билет на концерт</option><option value="order">Заказать выступление</option><option value="cooperation">Сотрудничество</option><option value="refund">Возврат билетов</option> <option value="other">Другое</option></select></div>
             <div class="form-group"><label>Сообщение</label><textarea name="message" placeholder="Расскажите подробнее о вашем запросе..."></textarea></div>
             <button type="submit" class="btn btn-primary" style="width:100%;">Отправить заявку</button>
             <div class="form-status" id="homeFormStatus"></div>
@@ -1074,7 +1080,7 @@
   <section class="section" style="padding-top: 20px;">
     <div class="container">
       <div class="contacts-grid">
-        <div>
+        <!-- <div>
           <h3 style="margin-bottom:25px;">Как с нами <span class="text-red">связаться</span></h3>
           <div class="contact-item reveal">
             <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
@@ -1100,13 +1106,37 @@
               <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             </a>
           </div>
-        </div>
+        </div> -->
+        <div>
+  <h3 style="margin-bottom:25px;">Как с нами <span class="text-red">связаться</span></h3>
+
+  <!-- Мессенджеры -->
+  <div class="contact-item reveal">
+    <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+    <div class="contact-info"><h4>Мессенджеры</h4><a href="https://t.me/orchestraBest" target="_blank">Telegram</a> <a href="https://vk.com/orchestra.best" target="_blank">ВК</a></div>
+  </div>
+
+  <!-- Почта -->
+  <div class="contact-item reveal">
+    <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="none" stroke="currentColor" stroke-width="2"/><polyline points="22,6 12,13 2,6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+    <div class="contact-info"><h4>Почта</h4><a href="mailto:info@slo-orchestra.ru">info@slo-orchestra.ru</a></div>
+  </div>
+
+  <!-- Телефон (с копированием) -->
+  <div class="contact-item reveal">
+    <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.574 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+    <div class="contact-info"><h4>Телефон</h4><a href="#" onclick="navigator.clipboard.writeText('+7 (999) 123-45-67'); return false;">+7 (999) 123-45-67</a></div>
+  </div>
+
+  <!-- Здесь больше не нужно дублировать соцсети, так как они уже есть в футере. 
+       Но если хочешь оставить – можешь вставить блок .social-links из футера -->
+</div>
         <div class="form-wrapper reveal">
           <h3 style="margin-bottom:25px;">Напишите <span class="text-red">нам</span></h3>
           <form id="contactForm" onsubmit="handleFormSubmit(event,'contactForm')">
             <div class="form-group"><label>Ваше имя *</label><input type="text" name="name" required placeholder="Как к вам обращаться?"></div>
             <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="email@example.com"></div>
-            <div class="form-group"><label>Тема обращения</label><select name="subject"><option value="tickets">Билеты на концерт</option><option value="booking">Заказ выступления</option><option value="cooperation">Сотрудничество</option><option value="press">Пресса / Медиа</option><option value="other">Другое</option></select></div>
+            <div class="form-group"><label>Тема обращения</label><select name="subject"><option value="tickets">Билеты на концерт</option><option value="booking">Заказ выступления</option><option value="cooperation">Сотрудничество</option><option value="press">Пресса / Медиа</option><option value="press">Возврат билетов</option><option value="other">Другое</option></select></div>
             <div class="form-group"><label>Сообщение *</label><textarea name="message" required placeholder="Ваше сообщение..."></textarea></div>
             <button type="submit" class="btn btn-primary" style="width:100%;">Отправить</button>
             <div class="form-status" id="contactFormStatus"></div>
@@ -1144,13 +1174,63 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo-text" style="margin-bottom:15px;"><span class="logo-accent">С</span>Л<span class="logo-accent">О</span></div>
+        <!-- <div class="logo-text" style="margin-bottom:15px;"><span class="logo-accent">С</span>Л<span class="logo-accent">О</span></div> -->
+         <img src="logo_crop.png" alt="СЛО" style="height: 50px; width: auto; margin-bottom: 15px; display: block;">
         <p style="font-size:0.85rem;color:var(--gray);">Самый Лучший Оркестр под управлением Дмитрия Чиркова. Живые концерты и музыкальные шоу.</p>
-        <div class="social-links" style="justify-content:center;margin-top:15px;">
+        <!-- <div class="social-links" style="justify-content:center;margin-top:15px;">
           <a href="https://t.me/orchestraBest" target="_blank" class="social-link" aria-label="Telegram"><svg viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg></a>
           <a href="https://vk.com/orchestra.best" target="_blank" class="social-link" aria-label="VK"><svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202-2.17-3.049-2.763-5.339-2.763-5.814 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.864 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.644v3.49c0 .373.17.508.271.508.22 0 .407-.135.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.644-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.72-.576.72z"/></svg></a>
           <a href="https://youtube.com/@thebestorchestra" target="_blank" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-        </div>
+        </div> -->
+        <div class="social-links" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px 20px; justify-items: center; max-width: 300px; margin: 15px auto 0;">
+
+  <!-- Первая строка -->
+  <a href="https://t.me/orchestraBest" target="_blank" class="social-link" aria-label="Telegram">
+    <svg viewBox="0 0 24 24"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z"/></svg>
+  </a>
+
+  <a href="https://vk.com/orchestra.best" target="_blank" class="social-link" aria-label="VK">
+    <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.339-3.202-2.17-3.049-2.763-5.339-2.763-5.814 0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.864 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.644v3.49c0 .373.17.508.271.508.22 0 .407-.135.813-.542 1.253-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.644-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.72-.576.72z"/></svg>
+  </a>
+
+  <a href="https://youtube.com/@thebestorchestra" target="_blank" class="social-link" aria-label="YouTube">
+    <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+  </a>
+
+  <!-- Вторая строка: TikTok под Telegram, MAX под VK, под YouTube – пусто -->
+  <a href="https://www.tiktok.com/@luchshii_orkestr" target="_blank" class="social-link" aria-label="TikTok">
+    <svg viewBox="0 0 24 24"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5 2.592 2.592 0 0 1-2.59-2.5 2.592 2.592 0 0 1 2.59-2.5c.54 0 1.04.16 1.47.44v-3.18a5.686 5.686 0 0 0-4.46.42 5.754 5.754 0 0 0-3.11 5.02c0 3.19 2.59 5.78 5.78 5.78s5.78-2.59 5.78-5.78V9.56c.65.47 1.48.74 2.34.74V7.1c-1.04 0-1.92-.46-2.45-1.28z"/></svg>
+  </a>
+
+  <!-- <a href="https://max.ru/orchestraBest" target="_blank" class="social-link" aria-label="MAX">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+      <path d="M2 17l10 5 10-5"/>
+      <path d="M2 12l10 5 10-5"/>
+    </svg>
+  </a> -->
+  <!-- <a href="https://max.ru/orchestraBest" target="_blank" class="social-link" aria-label="MAX">
+  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="maxGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#4A7CF7;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#6C3CE1;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <circle cx="256" cy="256" r="230" fill="url(#maxGradient)" stroke="#3A5FCC" stroke-width="4"/>
+    <text x="256" y="300" font-family="Arial, sans-serif" font-size="180" font-weight="700" fill="white" text-anchor="middle">MAX</text>
+  </svg>
+</a> -->
+<a href="https://max.ru/orchestraBest" target="_blank" class="social-link" aria-label="MAX">
+  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="256" cy="256" r="230" fill="white" stroke="black" stroke-width="4"/>
+    <text x="256" y="300" font-family="Arial, sans-serif" font-size="180" font-weight="700" fill="black" text-anchor="middle">MAX</text>
+  </svg>
+</a>
+  <!-- Третья ячейка во второй строке остаётся пустой, но чтобы сетка не рушилась, можно поставить пустой div -->
+  <div style="visibility: hidden;"></div>
+
+</div>
       </div>
       <div>
         <h4>Навигация</h4>
