@@ -389,6 +389,27 @@
     .draft-content { text-align: center; padding: 60px 20px; }
     .draft-content h1 { margin-bottom: 20px; }
     .draft-content p { color: var(--gray); margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    /* Мобильная версия для страницы Дмитрий Чирков */
+@media (max-width: 767px) {
+  .chirkov-hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .chirkov-hero-grid > .reveal {
+    order: 1;
+  }
+  .chirkov-hero-grid > .chirkov-photo {
+    order: 2;
+    max-width: 100%;
+    margin: 0;
+  }
+  .chirkov-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+}
   </style>
 </head>
 <body>
